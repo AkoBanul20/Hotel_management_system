@@ -29,18 +29,24 @@ Partial Class MainFrm
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.button_panel = New System.Windows.Forms.Panel()
+        Me.reservation_btn = New System.Windows.Forms.Button()
+        Me.room_btn = New System.Windows.Forms.Button()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.count_avail_room_text = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.dash1_btn = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.count_reservation_text = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -52,26 +58,20 @@ Partial Class MainFrm
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.reservation_btn = New System.Windows.Forms.Button()
-        Me.room_btn = New System.Windows.Forms.Button()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.button_panel.SuspendLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         Me.Panel6.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel7.SuspendLayout()
         Me.Panel8.SuspendLayout()
-        CType(Me.Room_grid_list, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Room_grid_list, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -131,6 +131,55 @@ Partial Class MainFrm
         Me.button_panel.Size = New System.Drawing.Size(272, 357)
         Me.button_panel.TabIndex = 15
         '
+        'reservation_btn
+        '
+        Me.reservation_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(70, Byte), Integer), CType(CType(108, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.reservation_btn.Dock = System.Windows.Forms.DockStyle.Top
+        Me.reservation_btn.FlatAppearance.BorderSize = 0
+        Me.reservation_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.reservation_btn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.reservation_btn.ForeColor = System.Drawing.Color.White
+        Me.reservation_btn.Image = Global.Hotel_Reservation.My.Resources.Resources.reservation_30px
+        Me.reservation_btn.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.reservation_btn.Location = New System.Drawing.Point(0, 59)
+        Me.reservation_btn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.reservation_btn.Name = "reservation_btn"
+        Me.reservation_btn.Padding = New System.Windows.Forms.Padding(12)
+        Me.reservation_btn.Size = New System.Drawing.Size(272, 59)
+        Me.reservation_btn.TabIndex = 6
+        Me.reservation_btn.Text = "Reservation"
+        Me.reservation_btn.UseVisualStyleBackColor = False
+        '
+        'room_btn
+        '
+        Me.room_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(70, Byte), Integer), CType(CType(108, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.room_btn.Dock = System.Windows.Forms.DockStyle.Top
+        Me.room_btn.FlatAppearance.BorderSize = 0
+        Me.room_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.room_btn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.room_btn.ForeColor = System.Drawing.Color.White
+        Me.room_btn.Image = Global.Hotel_Reservation.My.Resources.Resources.sleeping_in_bed_30px
+        Me.room_btn.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.room_btn.Location = New System.Drawing.Point(0, 0)
+        Me.room_btn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.room_btn.Name = "room_btn"
+        Me.room_btn.Padding = New System.Windows.Forms.Padding(12)
+        Me.room_btn.Size = New System.Drawing.Size(272, 59)
+        Me.room_btn.TabIndex = 5
+        Me.room_btn.Text = "Room"
+        Me.room_btn.UseVisualStyleBackColor = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.Hotel_Reservation.My.Resources.Resources._5628953_middle1
+        Me.PictureBox4.Location = New System.Drawing.Point(51, 30)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(159, 144)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox4.TabIndex = 15
+        Me.PictureBox4.TabStop = False
+        '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.White
@@ -154,6 +203,18 @@ Partial Class MainFrm
         Me.Panel4.Size = New System.Drawing.Size(66, 66)
         Me.Panel4.TabIndex = 10
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.Image = Global.Hotel_Reservation.My.Resources.Resources.sleeping_in_bed_30px
+        Me.PictureBox3.Location = New System.Drawing.Point(16, 15)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox3.TabIndex = 9
+        Me.PictureBox3.TabStop = False
+        '
         'count_avail_room_text
         '
         Me.count_avail_room_text.AutoSize = True
@@ -172,9 +233,9 @@ Partial Class MainFrm
         Me.Label2.ForeColor = System.Drawing.Color.DimGray
         Me.Label2.Location = New System.Drawing.Point(98, 31)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(115, 16)
+        Me.Label2.Size = New System.Drawing.Size(80, 16)
         Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Available Rooms"
+        Me.Label2.Text = "Total Room"
         '
         'dash1_btn
         '
@@ -214,6 +275,18 @@ Partial Class MainFrm
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(66, 66)
         Me.Panel6.TabIndex = 10
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.Hotel_Reservation.My.Resources.Resources.reservation_30px
+        Me.PictureBox1.Location = New System.Drawing.Point(16, 15)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox1.TabIndex = 9
+        Me.PictureBox1.TabStop = False
         '
         'count_reservation_text
         '
@@ -275,6 +348,18 @@ Partial Class MainFrm
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(66, 66)
         Me.Panel8.TabIndex = 10
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Image = Global.Hotel_Reservation.My.Resources.Resources.reception_30px
+        Me.PictureBox2.Location = New System.Drawing.Point(16, 15)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox2.TabIndex = 9
+        Me.PictureBox2.TabStop = False
         '
         'Label7
         '
@@ -412,91 +497,6 @@ Partial Class MainFrm
         Me.Label9.TabIndex = 14
         Me.Label9.Text = "Available Rooms"
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Image = Global.Hotel_Reservation.My.Resources.Resources.reception_30px
-        Me.PictureBox2.Location = New System.Drawing.Point(16, 15)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(30, 30)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox2.TabIndex = 9
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.Hotel_Reservation.My.Resources.Resources.reservation_30px
-        Me.PictureBox1.Location = New System.Drawing.Point(16, 15)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(30, 30)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox1.TabIndex = 9
-        Me.PictureBox1.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Image = Global.Hotel_Reservation.My.Resources.Resources.sleeping_in_bed_30px
-        Me.PictureBox3.Location = New System.Drawing.Point(16, 15)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(30, 30)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox3.TabIndex = 9
-        Me.PictureBox3.TabStop = False
-        '
-        'reservation_btn
-        '
-        Me.reservation_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(70, Byte), Integer), CType(CType(108, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.reservation_btn.Dock = System.Windows.Forms.DockStyle.Top
-        Me.reservation_btn.FlatAppearance.BorderSize = 0
-        Me.reservation_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.reservation_btn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.reservation_btn.ForeColor = System.Drawing.Color.White
-        Me.reservation_btn.Image = Global.Hotel_Reservation.My.Resources.Resources.reservation_30px
-        Me.reservation_btn.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.reservation_btn.Location = New System.Drawing.Point(0, 59)
-        Me.reservation_btn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.reservation_btn.Name = "reservation_btn"
-        Me.reservation_btn.Padding = New System.Windows.Forms.Padding(12)
-        Me.reservation_btn.Size = New System.Drawing.Size(272, 59)
-        Me.reservation_btn.TabIndex = 6
-        Me.reservation_btn.Text = "Reservation"
-        Me.reservation_btn.UseVisualStyleBackColor = False
-        '
-        'room_btn
-        '
-        Me.room_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(70, Byte), Integer), CType(CType(108, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.room_btn.Dock = System.Windows.Forms.DockStyle.Top
-        Me.room_btn.FlatAppearance.BorderSize = 0
-        Me.room_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.room_btn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.room_btn.ForeColor = System.Drawing.Color.White
-        Me.room_btn.Image = Global.Hotel_Reservation.My.Resources.Resources.sleeping_in_bed_30px
-        Me.room_btn.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.room_btn.Location = New System.Drawing.Point(0, 0)
-        Me.room_btn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.room_btn.Name = "room_btn"
-        Me.room_btn.Padding = New System.Windows.Forms.Padding(12)
-        Me.room_btn.Size = New System.Drawing.Size(272, 59)
-        Me.room_btn.TabIndex = 5
-        Me.room_btn.Text = "Room"
-        Me.room_btn.UseVisualStyleBackColor = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = Global.Hotel_Reservation.My.Resources.Resources._5628953_middle1
-        Me.PictureBox4.Location = New System.Drawing.Point(51, 30)
-        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(159, 144)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox4.TabIndex = 15
-        Me.PictureBox4.TabStop = False
-        '
         'MainFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -520,23 +520,23 @@ Partial Class MainFrm
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.button_panel.ResumeLayout(False)
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
-        CType(Me.Room_grid_list, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Room_grid_list, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

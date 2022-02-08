@@ -81,6 +81,12 @@
     <Compile Include="AddRoomFrm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CheckDateReservationFrm.Designer.vb">
+      <DependentUpon>CheckDateReservationFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CheckDateReservationFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MakeReservationFrm.Designer.vb">
       <DependentUpon>MakeReservationFrm.vb</DependentUpon>
     </Compile>
@@ -136,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddRoomFrm.resx">
       <DependentUpon>AddRoomFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckDateReservationFrm.resx">
+      <DependentUpon>CheckDateReservationFrm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MakeReservationFrm.resx">
       <DependentUpon>MakeReservationFrm.vb</DependentUpon>

@@ -13,3 +13,4 @@ C:\Users\AJ\Documents\VB_System\Hotel_reservation\Hotel_Reservation\Hotel_Reserv
 C:\Users\AJ\Documents\VB_System\Hotel_reservation\Hotel_Reservation\Hotel_Reservation\obj\Debug\Hotel_Reservation.ReservationFrm.resources
 C:\Users\AJ\Documents\VB_System\Hotel_reservation\Hotel_Reservation\Hotel_Reservation\obj\Debug\Hotel_Reservation.AddReservationFrm.resources
 C:\Users\AJ\Documents\VB_System\Hotel_reservation\Hotel_Reservation\Hotel_Reservation\obj\Debug\Hotel_Reservation.MakeReservationFrm.resources
+C:\Users\AJ\Documents\VB_System\Hotel_reservation\Hotel_Reservation\Hotel_Reservation\obj\Debug\Hotel_Reservation.CheckDateReservationFrm.resources

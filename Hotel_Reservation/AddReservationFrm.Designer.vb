@@ -22,6 +22,7 @@ Partial Class AddReservationFrm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.save_room_btn = New System.Windows.Forms.Button()
         Me.cancel_btn = New System.Windows.Forms.Button()
@@ -34,8 +35,18 @@ Partial Class AddReservationFrm
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
-        Me.customer_text = New System.Windows.Forms.TextBox()
+        Me.customer_first_name = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
+        Me.customer_contact = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.customer_address = New System.Windows.Forms.TextBox()
+        Me.customer_middle_name = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.customer_last_name = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Panel1
@@ -44,7 +55,7 @@ Partial Class AddReservationFrm
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(85, 321)
+        Me.Panel1.Size = New System.Drawing.Size(85, 399)
         Me.Panel1.TabIndex = 1
         '
         'save_room_btn
@@ -57,7 +68,7 @@ Partial Class AddReservationFrm
         Me.save_room_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.save_room_btn.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.save_room_btn.ForeColor = System.Drawing.Color.White
-        Me.save_room_btn.Location = New System.Drawing.Point(390, 279)
+        Me.save_room_btn.Location = New System.Drawing.Point(388, 356)
         Me.save_room_btn.Name = "save_room_btn"
         Me.save_room_btn.Size = New System.Drawing.Size(88, 30)
         Me.save_room_btn.TabIndex = 13
@@ -74,7 +85,7 @@ Partial Class AddReservationFrm
         Me.cancel_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cancel_btn.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cancel_btn.ForeColor = System.Drawing.Color.White
-        Me.cancel_btn.Location = New System.Drawing.Point(479, 279)
+        Me.cancel_btn.Location = New System.Drawing.Point(477, 356)
         Me.cancel_btn.Name = "cancel_btn"
         Me.cancel_btn.Size = New System.Drawing.Size(90, 30)
         Me.cancel_btn.TabIndex = 12
@@ -166,14 +177,14 @@ Partial Class AddReservationFrm
         Me.DateTimePicker3.Size = New System.Drawing.Size(229, 23)
         Me.DateTimePicker3.TabIndex = 52
         '
-        'customer_text
+        'customer_first_name
         '
-        Me.customer_text.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.customer_text.Location = New System.Drawing.Point(95, 175)
-        Me.customer_text.Multiline = True
-        Me.customer_text.Name = "customer_text"
-        Me.customer_text.Size = New System.Drawing.Size(474, 25)
-        Me.customer_text.TabIndex = 55
+        Me.customer_first_name.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.customer_first_name.Location = New System.Drawing.Point(95, 175)
+        Me.customer_first_name.Multiline = True
+        Me.customer_first_name.Name = "customer_first_name"
+        Me.customer_first_name.Size = New System.Drawing.Size(145, 25)
+        Me.customer_first_name.TabIndex = 55
         '
         'Label13
         '
@@ -181,17 +192,116 @@ Partial Class AddReservationFrm
         Me.Label13.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.Location = New System.Drawing.Point(92, 155)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(115, 17)
+        Me.Label13.Size = New System.Drawing.Size(69, 17)
         Me.Label13.TabIndex = 54
-        Me.Label13.Text = "Customer Name"
+        Me.Label13.Text = "Firstname"
+        '
+        'SerialPort1
+        '
+        Me.SerialPort1.RtsEnable = True
+        '
+        'customer_contact
+        '
+        Me.customer_contact.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.customer_contact.Location = New System.Drawing.Point(95, 227)
+        Me.customer_contact.Multiline = True
+        Me.customer_contact.Name = "customer_contact"
+        Me.customer_contact.Size = New System.Drawing.Size(474, 25)
+        Me.customer_contact.TabIndex = 56
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(92, 205)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(90, 17)
+        Me.Label6.TabIndex = 57
+        Me.Label6.Text = "Contact No."
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(92, 266)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(57, 17)
+        Me.Label7.TabIndex = 59
+        Me.Label7.Text = "Address"
+        '
+        'customer_address
+        '
+        Me.customer_address.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.customer_address.Location = New System.Drawing.Point(95, 288)
+        Me.customer_address.Multiline = True
+        Me.customer_address.Name = "customer_address"
+        Me.customer_address.Size = New System.Drawing.Size(474, 25)
+        Me.customer_address.TabIndex = 58
+        '
+        'customer_middle_name
+        '
+        Me.customer_middle_name.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.customer_middle_name.Location = New System.Drawing.Point(259, 175)
+        Me.customer_middle_name.Multiline = True
+        Me.customer_middle_name.Name = "customer_middle_name"
+        Me.customer_middle_name.Size = New System.Drawing.Size(145, 25)
+        Me.customer_middle_name.TabIndex = 60
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(258, 155)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(89, 17)
+        Me.Label8.TabIndex = 61
+        Me.Label8.Text = "Middlename"
+        '
+        'customer_last_name
+        '
+        Me.customer_last_name.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.customer_last_name.Location = New System.Drawing.Point(424, 175)
+        Me.customer_last_name.Multiline = True
+        Me.customer_last_name.Name = "customer_last_name"
+        Me.customer_last_name.Size = New System.Drawing.Size(145, 25)
+        Me.customer_last_name.TabIndex = 62
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(421, 155)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(71, 17)
+        Me.Label9.TabIndex = 63
+        Me.Label9.Text = "Lastname"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(143, 335)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(47, 17)
+        Me.Label10.TabIndex = 64
+        Me.Label10.Text = "Room"
         '
         'AddReservationFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(602, 321)
-        Me.Controls.Add(Me.customer_text)
+        Me.ClientSize = New System.Drawing.Size(585, 399)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.customer_last_name)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.customer_middle_name)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.customer_address)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.customer_contact)
+        Me.Controls.Add(Me.customer_first_name)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.DateTimePicker3)
@@ -225,6 +335,16 @@ Partial Class AddReservationFrm
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents DateTimePicker3 As System.Windows.Forms.DateTimePicker
-    Friend WithEvents customer_text As System.Windows.Forms.TextBox
+    Friend WithEvents customer_first_name As System.Windows.Forms.TextBox
     Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents SerialPort1 As System.IO.Ports.SerialPort
+    Friend WithEvents customer_contact As System.Windows.Forms.TextBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents customer_address As System.Windows.Forms.TextBox
+    Friend WithEvents customer_middle_name As System.Windows.Forms.TextBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents customer_last_name As System.Windows.Forms.TextBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
 End Class

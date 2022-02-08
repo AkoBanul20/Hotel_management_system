@@ -11,11 +11,13 @@ Public Class AddRoomFrm
     End Sub
 
     Sub save_room()
-        Dim insert_query_string As String = "INSERT INTO  rooms VALUES ('" & roomno_text.Text & "', '" & room_type_box.Text & "', '" & description_text.Text & "', '" & price_text.Text & "', '" & max_person_text.Text & "');"
+        Dim insert_query_string As String = "INSERT INTO  rooms ( room_no, room_type, description, price, max_person, is_available ) VALUES ('" & roomno_text.Text & "', '" & room_type_box.Text & "', '" & description_text.Text & "', '" & price_text.Text & "', '" & max_person_text.Text & "', '1');"
         cm = New SqlCommand(insert_query_string, connect)
         cm.ExecuteNonQuery()
         MessageBox.Show("Record Save!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
         clear_input()
+        RoomFrm.load_rooms()
+        MainFrm.count_available_room()
         Me.Dispose()
     End Sub
 
