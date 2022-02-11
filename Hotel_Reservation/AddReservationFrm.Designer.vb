@@ -46,7 +46,6 @@ Partial Class AddReservationFrm
         Me.Label8 = New System.Windows.Forms.Label()
         Me.customer_last_name = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Panel1
@@ -198,6 +197,7 @@ Partial Class AddReservationFrm
         '
         'SerialPort1
         '
+        Me.SerialPort1.PortName = "COM3"
         Me.SerialPort1.RtsEnable = True
         '
         'customer_contact
@@ -276,23 +276,12 @@ Partial Class AddReservationFrm
         Me.Label9.TabIndex = 63
         Me.Label9.Text = "Lastname"
         '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(143, 335)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(47, 17)
-        Me.Label10.TabIndex = 64
-        Me.Label10.Text = "Room"
-        '
         'AddReservationFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(585, 399)
-        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.customer_last_name)
         Me.Controls.Add(Me.Label8)
@@ -346,5 +335,4 @@ Partial Class AddReservationFrm
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents customer_last_name As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents Label10 As System.Windows.Forms.Label
 End Class

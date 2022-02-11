@@ -18,7 +18,7 @@ Public Class ReservationFrm
             Dim new_checkin = checkin.ToString("hh:mm tt")
             Dim new_checkout = checkout.ToString("hh:mm tt")
             Dim new_date_reserved = date_reserved.ToString("MM/dd/yyyy")
-            reservation_grid_list.Rows.Add(dr.Item("ID").ToString(), dr.Item("room").ToString(), new_date_reserved, dr.Item("customer_name").ToString(), new_checkin, new_checkout, dr.Item("status").ToString(), "Check-IN")
+            reservation_grid_list.Rows.Add(dr.Item("ID").ToString(), dr.Item("room").ToString(), new_date_reserved, dr.Item("customer_name").ToString(), new_checkin, new_checkout, dr.Item("status").ToString())
         End While
         dr.Close()
 
@@ -26,7 +26,7 @@ Public Class ReservationFrm
     End Sub
     Sub search_reservations()
         reservation_grid_list.Rows.Clear()
-        Dim load_reservation_queyr As String = "SELECT * FROM reservations WHERE customer_name LIKE '%" & customer_name_search.Text & "%' "
+        Dim load_reservation_queyr As String = "SELECT * FROM reservations WHERE customer_name LIKE '%" & customer_name_search.Text & "%' OR date_reservation='" & DateTimePicker1.Value & "' "
         cm = New SqlCommand(load_reservation_queyr, connect)
 
         dr = cm.ExecuteReader
@@ -41,7 +41,7 @@ Public Class ReservationFrm
             Dim new_checkin = checkin.ToString("hh:mm tt")
             Dim new_checkout = checkout.ToString("hh:mm tt")
             Dim new_date_reserved = date_reserved.ToString("MM/dd/yyyy")
-            reservation_grid_list.Rows.Add(dr.Item("ID").ToString(), dr.Item("room").ToString(), new_date_reserved, dr.Item("customer_name").ToString(), new_checkin, new_checkout)
+            reservation_grid_list.Rows.Add(dr.Item("ID").ToString(), dr.Item("room").ToString(), new_date_reserved, dr.Item("customer_name").ToString(), new_checkin, new_checkout, dr.Item("status").ToString())
         End While
         dr.Close()
     End Sub

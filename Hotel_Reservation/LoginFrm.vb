@@ -7,6 +7,17 @@ Public Class LoginFrm
         Label3.BackColor = Color.Transparent
         TextBox2.UseSystemPasswordChar = True
     End Sub
+    Sub check_fields()
+        If TextBox1.Text = Nothing Then
+            MessageBox.Show("Input username field", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        ElseIf TextBox2.Text = Nothing Then
+            MessageBox.Show("Input password field", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        ElseIf TextBox1.Text = Nothing And TextBox2.Text Is Nothing Then
+            MessageBox.Show("Please enter your account", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        Else
+            login_process()
+        End If
+    End Sub
     Sub login_process()
         cm = New SqlCommand("SELECT username,password FROM accounts WHERE username = '" & TextBox1.Text & "' AND password = '" & TextBox2.Text & "' ", connect)
         dr = cm.ExecuteReader
@@ -24,7 +35,7 @@ Public Class LoginFrm
     End Sub
 
     Private Sub login_btn_Click(sender As Object, e As EventArgs) Handles login_btn.Click
-        login_process()
+        check_fields()
     End Sub
 
     Private Sub LoginFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load

@@ -49,4 +49,12 @@ Public Class MainFrm
     Private Sub reservation_btn_Click(sender As Object, e As EventArgs) Handles reservation_btn.Click
         ReservationFrm.ShowDialog()
     End Sub
+
+    Private Sub dash1_btn_Click(sender As Object, e As EventArgs) Handles dash1_btn.Click
+        RoomFrm.ShowDialog()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ReservationFrm.ShowDialog()
+    End Sub
 End Class

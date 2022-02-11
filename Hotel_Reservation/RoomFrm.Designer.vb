@@ -186,7 +186,7 @@ Partial Class RoomFrm
         Me.add_new_room_btn.ForeColor = System.Drawing.Color.White
         Me.add_new_room_btn.Location = New System.Drawing.Point(443, 31)
         Me.add_new_room_btn.Name = "add_new_room_btn"
-        Me.add_new_room_btn.Size = New System.Drawing.Size(88, 27)
+        Me.add_new_room_btn.Size = New System.Drawing.Size(191, 27)
         Me.add_new_room_btn.TabIndex = 5
         Me.add_new_room_btn.Text = "Add Room"
         Me.add_new_room_btn.UseVisualStyleBackColor = False

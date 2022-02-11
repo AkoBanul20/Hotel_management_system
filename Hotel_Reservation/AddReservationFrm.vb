@@ -5,14 +5,13 @@ Imports System.Threading.Thread
 Public Class AddReservationFrm
     Dim customer_name As String = ""
     Sub get_latest_customer()
-        Dim get_latest_customer_query As String = "SELECT TOP 1  CONCAT(firstname,' ',lastname) as customer_name FROM customers ORDER BY id DESC;"
+        Dim get_latest_customer_query As String = "SELECT TOP 1  firstname, lastname FROM customers ORDER BY id DESC;"
         cm = New SqlCommand(get_latest_customer_query, connect)
         dr = cm.ExecuteReader
 
         If dr.Read Then
-            customer_name = dr.Item("customer_name")
+            customer_name = dr.Item("firstname") & " " & dr.Item("lastname")
         End If
-        Label10.Text = customer_name
     End Sub
     Sub save_customer()
         Dim save_customer_query As String = "INSERT INTO customers (lastname, firstname, middlename, contact_no, address) VALUES " _
@@ -30,6 +29,7 @@ Public Class AddReservationFrm
         cm.ExecuteNonQuery()
         MessageBox.Show("Record Save!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
         ReservationFrm.load_reservations()
+        send_message_confirmation()
         Me.Dispose()
     End Sub
 
@@ -75,15 +75,14 @@ Public Class AddReservationFrm
 
             SerialPort1.Write("AT+CMGS=" & """" & customer_contact.Text & """" & vbCrLf)
             Sleep(1000)
-            SerialPort1.Write("You are already have booked reservation for date and time" & Chr(26))
+            SerialPort1.Write("You are already have booked reservation in our hotel for " & DateTimePicker1.Value.ToLongDateString & " in room " & room_box.SelectedValue.ToString() & Chr(26))
             Sleep(3000)
             Dim asd As String = SerialPort1.ReadExisting
             If InStr(asd, "OK") Then
-                MsgBox("SEND", MsgBoxStyle.Information)
-                '
+                MessageBox.Show("Reservation details send to customer!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
             Else
-                MsgBox("Failed!", MsgBoxStyle.Exclamation)
-                '
+                MessageBox.Show("Message failed to send!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End If
             SerialPort1.DtrEnable = False
             SerialPort1.RtsEnable = False
